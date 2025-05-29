@@ -1,0 +1,74 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "menu": "Menú",
+    "promotions": "Promociones",
+    "contact": "Contacto",
+    "search": "Buscar",
+    "language": "Idioma"
+  },
+  "home": {
+    "hero": {
+      "title": "Auténtica Pizza Italiana",
+      "subtitle": "Hecha con amor y tradición",
+      "cta": "Pedir Ahora"
+    },
+    "featured": {
+      "title": "Pizzas Destacadas",
+      "viewAll": "Ver Todas"
+    },
+    "promotions": {
+      "title": "Ofertas Especiales",
+      "viewAll": "Ver Todas las Promociones"
+    },
+    "about": {
+      "title": "Sobre Nuestra Pizzería",
+      "content": "Llevamos más de 20 años elaborando auténticas pizzas italianas, utilizando solo los ingredientes más frescos y recetas tradicionales transmitidas de generación en generación."
+    }
+  },
+  "menu": {
+    "title": "Nuestro Menú",
+    "categories": {
+      "classic": "Pizzas Clásicas",
+      "special": "Pizzas Especiales",
+      "vegetarian": "Vegetarianas",
+      "calzone": "Calzones"
+    },
+    "ingredients": "Ingredientes",
+    "price": "Precio",
+    "addToCart": "Añadir al Carrito"
+  },
+  "promotions": {
+    "title": "Promociones Actuales",
+    "validUntil": "Válido hasta"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "form": {
+      "name": "Tu Nombre",
+      "email": "Tu Email",
+      "message": "Tu Mensaje",
+      "submit": "Enviar Mensaje"
+    },
+    "info": {
+      "address": "Dirección",
+      "phone": "Teléfono",
+      "hours": "Horario de Apertura"
+    }
+  },
+  "pizzaBuilder": {
+    "title": "Crea Tu Propia Pizza",
+    "start": "Empezar a Crear",
+    "base": "Elige Tu Base",
+    "sauce": "Selecciona Salsa",
+    "cheese": "Añade Queso",
+    "toppings": "Añade Ingredientes",
+    "finish": "Finalizar",
+    "create": "Crear Tu Pizza"
+  },
+  "footer": {
+    "rights": "Todos los Derechos Reservados",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  }
+}

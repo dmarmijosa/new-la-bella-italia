@@ -1,0 +1,118 @@
+{
+  "navigation": {
+    "home": "Home",
+    "menu": "Menu",
+    "promotions": "Promozioni",
+    "contact": "Contatti",
+    "search": "Cerca",
+    "language": "Lingua"
+  },
+  "home": {
+    "hero": {
+      "title": "Benvenuti a La Bella Pizza",
+      "subtitle": "Pizza italiana autentica dal 2003",
+      "cta": "Vedi il menu"
+    },
+    "featured": {
+      "title": "Pizze popolari",
+      "viewAll": "Vedi tutte"
+    },
+    "promotions": {
+      "title": "Promozioni attuali",
+      "viewAll": "Tutte le promozioni"
+    },
+    "about": {
+      "title": "Chi siamo",
+      "content": "Dal 2003 serviamo pizza italiana autentica con gli ingredienti più freschi e ricette tradizionali. Il nostro forno a legna e la passione per la qualità rendono ogni pizza un'esperienza speciale."
+    }
+  },
+  "menu": {
+    "title": "Il nostro menu",
+    "categories": {
+      "classic": "Pizze classiche",
+      "special": "Pizze speciali",
+      "vegetarian": "Pizze vegetariane",
+      "calzone": "Calzone"
+    },
+    "ingredients": "Ingredienti",
+    "price": "Prezzo",
+    "addToCart": "Aggiungi al carrello"
+  },
+  "promotions": {
+    "title": "Promozioni attuali",
+    "validUntil": "Valido fino a"
+  },
+  "contact": {
+    "title": "Contattaci",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "message": "Messaggio",
+      "submit": "Invia",
+      "phone": "Telefono"
+    },
+    "info": {
+      "address": "Indirizzo",
+      "phone": "Telefono",
+      "hours": "Orari di apertura"
+    }
+  },
+  "pizzaBuilder": {
+    "title": "Crea la tua pizza",
+    "start": "Inizia",
+    "base": "Base",
+    "sauce": "Salsa",
+    "cheese": "Formaggio",
+    "toppings": "Condimenti",
+    "finish": "Finito",
+    "create": "Crea pizza"
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati",
+    "privacy": "Privacy",
+    "terms": "Termini"
+  },
+  "laBellaItalia": {
+    "promotions": [
+      {
+        "id": "menu-familiar",
+        "name": "Menu famiglia",
+        "description": "2 pizze grandi + 1 bevanda 2L",
+        "price": "€29.00",
+        "dayOfWeek": "Tutti i giorni",
+        "image": "/family-pizza.png"
+      },
+      {
+        "id": "pizza-3x2",
+        "name": "Offerta Pizza 3x2",
+        "description": "Compra 2 pizze e ne ricevi 1 gratis",
+        "price": null,
+        "dayOfWeek": "Lunedì a giovedì",
+        "image": "/pizza-promotion-3x2.png"
+      },
+      {
+        "id": "discount-15",
+        "name": "Sconto del 15%",
+        "description": "Su tutte le pizze",
+        "price": null,
+        "dayOfWeek": "Martedì e mercoledì",
+        "image": "/pizza-promotion-discount.png"
+      }
+    ],
+    "schedule": "Lunedì: Chiuso (tranne giugno, luglio, agosto)\nMartedì - Domenica: 18:00 - Chiusura\nGiugno, luglio, agosto: Aperto tutti i giorni",
+    "contact": ["+34 685 177 889", "+34 971 37 48 48"],
+    "additionalInfo": {
+      "productQuality": "Prodotti di alta qualità",
+      "cuisineType": "Cucina italiana",
+      "bananasCollaboration": "In collaborazione con Bananas",
+      "cardPaymentAtHome": "Pagamento con carta a domicilio disponibile"
+    },
+    "extraIngredientInfo": {
+      "title": "Ingrediente extra",
+      "details": "(Pesce/Carne/Formaggio): +1,00€"
+    },
+    "openingHoursTitle": "Orari di apertura",
+    "additionalInfoTitle": "Informazioni aggiuntive",
+    "noPromotionJulyAugust": "Nessuna promozione a luglio e agosto"
+  }
+}

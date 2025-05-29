@@ -1,0 +1,118 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "menu": "Menu",
+    "promotions": "Promotions",
+    "contact": "Contact",
+    "search": "Rechercher",
+    "language": "Langue"
+  },
+  "home": {
+    "hero": {
+      "title": "Bienvenue chez La Bella Pizza",
+      "subtitle": "Pizza italienne authentique depuis 2003",
+      "cta": "Voir le menu"
+    },
+    "featured": {
+      "title": "Pizzas populaires",
+      "viewAll": "Voir tout"
+    },
+    "promotions": {
+      "title": "Promotions actuelles",
+      "viewAll": "Toutes les promotions"
+    },
+    "about": {
+      "title": "À propos de nous",
+      "content": "Depuis 2003, nous servons des pizzas italiennes authentiques avec les ingrédients les plus frais et des recettes traditionnelles. Notre four à bois et notre passion pour la qualité font de chaque pizza une expérience spéciale."
+    }
+  },
+  "menu": {
+    "title": "Notre menu",
+    "categories": {
+      "classic": "Pizzas classiques",
+      "special": "Pizzas spéciales",
+      "vegetarian": "Pizzas végétariennes",
+      "calzone": "Calzone"
+    },
+    "ingredients": "Ingrédients",
+    "price": "Prix",
+    "addToCart": "Ajouter au panier"
+  },
+  "promotions": {
+    "title": "Promotions actuelles",
+    "validUntil": "Valable jusqu'au"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "form": {
+      "name": "Nom",
+      "email": "E-mail",
+      "message": "Message",
+      "submit": "Envoyer",
+      "phone": "Téléphone"
+    },
+    "info": {
+      "address": "Adresse",
+      "phone": "Téléphone",
+      "hours": "Heures d'ouverture"
+    }
+  },
+  "pizzaBuilder": {
+    "title": "Créateur de pizza",
+    "start": "Commencer",
+    "base": "Base",
+    "sauce": "Sauce",
+    "cheese": "Fromage",
+    "toppings": "Garnitures",
+    "finish": "Terminer",
+    "create": "Créer la pizza"
+  },
+  "footer": {
+    "rights": "Tous droits réservés",
+    "privacy": "Confidentialité",
+    "terms": "Conditions"
+  },
+  "laBellaItalia": {
+    "promotions": [
+      {
+        "id": "menu-familiar",
+        "name": "Menu familial",
+        "description": "2 grandes pizzas + 1 boisson 2L",
+        "price": "€29.00",
+        "dayOfWeek": "Tous les jours",
+        "image": "/family-pizza.png"
+      },
+      {
+        "id": "pizza-3x2",
+        "name": "Offre Pizza 3x2",
+        "description": "Achetez 2 pizzas et obtenez-en 1 gratuite",
+        "price": null,
+        "dayOfWeek": "Lundi à jeudi",
+        "image": "/pizza-promotion-3x2.png"
+      },
+      {
+        "id": "discount-15",
+        "name": "15% de réduction",
+        "description": "Sur toutes les pizzas",
+        "price": null,
+        "dayOfWeek": "Mardi et mercredi",
+        "image": "/pizza-promotion-discount.png"
+      }
+    ],
+    "schedule": "Lundi : Fermé (sauf juin, juillet, août)\nMardi - Dimanche : 18h00 - Fermeture\nJuin, juillet, août : Ouvert tous les jours",
+    "contact": ["+34 685 177 889", "+34 971 37 48 48"],
+    "additionalInfo": {
+      "productQuality": "Produits de haute qualité",
+      "cuisineType": "Cuisine italienne",
+      "bananasCollaboration": "En collaboration avec Bananas",
+      "cardPaymentAtHome": "Paiement par carte à domicile disponible"
+    },
+    "extraIngredientInfo": {
+      "title": "Ingrédient supplémentaire",
+      "details": "(Poisson/Viande/Fromage) : +1,00€"
+    },
+    "openingHoursTitle": "Heures d'ouverture",
+    "additionalInfoTitle": "Informations supplémentaires",
+    "noPromotionJulyAugust": "Pas de promotions en juillet et août"
+  }
+}

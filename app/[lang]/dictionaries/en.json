@@ -1,0 +1,74 @@
+{
+  "navigation": {
+    "home": "Home",
+    "menu": "Menu",
+    "promotions": "Promotions",
+    "contact": "Contact",
+    "search": "Search",
+    "language": "Language"
+  },
+  "home": {
+    "hero": {
+      "title": "Authentic Italian Pizza",
+      "subtitle": "Made with love and tradition",
+      "cta": "Order Now"
+    },
+    "featured": {
+      "title": "Featured Pizzas",
+      "viewAll": "View All"
+    },
+    "promotions": {
+      "title": "Special Offers",
+      "viewAll": "View All Promotions"
+    },
+    "about": {
+      "title": "About Our Pizzeria",
+      "content": "We've been crafting authentic Italian pizzas for over 20 years, using only the freshest ingredients and traditional recipes passed down through generations."
+    }
+  },
+  "menu": {
+    "title": "Our Menu",
+    "categories": {
+      "classic": "Classic Pizzas",
+      "special": "Special Pizzas",
+      "vegetarian": "Vegetarian",
+      "calzone": "Calzones"
+    },
+    "ingredients": "Ingredients",
+    "price": "Price",
+    "addToCart": "Add to Cart"
+  },
+  "promotions": {
+    "title": "Current Promotions",
+    "validUntil": "Valid until"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "submit": "Send Message"
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "hours": "Opening Hours"
+    }
+  },
+  "pizzaBuilder": {
+    "title": "Build Your Own Pizza",
+    "start": "Start Building",
+    "base": "Choose Your Base",
+    "sauce": "Select Sauce",
+    "cheese": "Add Cheese",
+    "toppings": "Add Toppings",
+    "finish": "Finish",
+    "create": "Create Your Pizza"
+  },
+  "footer": {
+    "rights": "All Rights Reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

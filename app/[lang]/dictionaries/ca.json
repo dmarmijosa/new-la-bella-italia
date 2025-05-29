@@ -1,0 +1,74 @@
+{
+  "navigation": {
+    "home": "Inici",
+    "menu": "Menú",
+    "promotions": "Promocions",
+    "contact": "Contacte",
+    "search": "Cercar",
+    "language": "Idioma"
+  },
+  "home": {
+    "hero": {
+      "title": "Autèntica Pizza Italiana",
+      "subtitle": "Feta amb amor i tradició",
+      "cta": "Demanar Ara"
+    },
+    "featured": {
+      "title": "Pizzes Destacades",
+      "viewAll": "Veure Totes"
+    },
+    "promotions": {
+      "title": "Ofertes Especials",
+      "viewAll": "Veure Totes les Promocions"
+    },
+    "about": {
+      "title": "Sobre la Nostra Pizzeria",
+      "content": "Portem més de 20 anys elaborant autèntiques pizzes italianes, utilitzant només els ingredients més frescos i receptes tradicionals transmeses de generació en generació."
+    }
+  },
+  "menu": {
+    "title": "El Nostre Menú",
+    "categories": {
+      "classic": "Pizzes Clàssiques",
+      "special": "Pizzes Especials",
+      "vegetarian": "Vegetarianes",
+      "calzone": "Calzones"
+    },
+    "ingredients": "Ingredients",
+    "price": "Preu",
+    "addToCart": "Afegir al Carret"
+  },
+  "promotions": {
+    "title": "Promocions Actuals",
+    "validUntil": "Vàlid fins"
+  },
+  "contact": {
+    "title": "Contacta'ns",
+    "form": {
+      "name": "El Teu Nom",
+      "email": "El Teu Email",
+      "message": "El Teu Missatge",
+      "submit": "Enviar Missatge"
+    },
+    "info": {
+      "address": "Adreça",
+      "phone": "Telèfon",
+      "hours": "Horari d'Obertura"
+    }
+  },
+  "pizzaBuilder": {
+    "title": "Crea La Teva Pròpia Pizza",
+    "start": "Començar a Crear",
+    "base": "Tria La Teva Base",
+    "sauce": "Selecciona Salsa",
+    "cheese": "Afegeix Formatge",
+    "toppings": "Afegeix Ingredients",
+    "finish": "Finalitzar",
+    "create": "Crear La Teva Pizza"
+  },
+  "footer": {
+    "rights": "Tots els Drets Reservats",
+    "privacy": "Política de Privacitat",
+    "terms": "Termes de Servei"
+  }
+}
