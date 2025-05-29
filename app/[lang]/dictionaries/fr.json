@@ -65,7 +65,30 @@
     "cheese": "Fromage",
     "toppings": "Garnitures",
     "finish": "Terminer",
-    "create": "Créer la pizza"
+    "create": "Créer la pizza",
+    "visualizer": {
+      "defaultName": "Ma Pizza Personnalisée",
+      "placeholder": "Sélectionnez des ingrédients pour créer votre pizza",
+      "none": "Aucun",
+      "toppingsCountSuffix": "garnitures"
+    },
+    "controls": {
+      "resetButton": "Réinitialiser",
+      "selectedToppingsLabel": "Garnitures sélectionnées",
+      "perToppingPriceSuffix": "par garniture"
+    },
+    "summary": {
+      "title": "Votre Pizza Personnalisée",
+      "baseLabel": "Base",
+      "sauceLabel": "Sauce",
+      "cheeseLabel": "Fromage",
+      "toppingsLabel": "Garnitures",
+      "totalPriceLabel": "Prix Total"
+    },
+    "navigation": {
+      "backButton": "Retour",
+      "nextButton": "Suivant"
+    }
   },
   "footer": {
     "rights": "Tous droits réservés",

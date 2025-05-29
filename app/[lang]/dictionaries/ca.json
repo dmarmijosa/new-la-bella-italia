@@ -48,7 +48,8 @@
       "name": "El Teu Nom",
       "email": "El Teu Email",
       "message": "El Teu Missatge",
-      "submit": "Enviar Missatge"
+      "submit": "Enviar Missatge",
+      "phone": "Telèfon"
     },
     "info": {
       "address": "Adreça",
@@ -64,11 +65,77 @@
     "cheese": "Afegeix Formatge",
     "toppings": "Afegeix Ingredients",
     "finish": "Finalitzar",
-    "create": "Crear La Teva Pizza"
+    "create": "Crear La Teva Pizza",
+    "visualizer": {
+      "defaultName": "La Meva Pizza Personalitzada",
+      "placeholder": "Selecciona ingredients per crear la teva pizza",
+      "none": "Cap",
+      "toppingsCountSuffix": "ingredients"
+    },
+    "controls": {
+      "resetButton": "Reiniciar",
+      "selectedToppingsLabel": "Ingredients seleccionats",
+      "perToppingPriceSuffix": "per ingredient"
+    },
+    "summary": {
+      "title": "La Teva Pizza Personalitzada",
+      "baseLabel": "Base",
+      "sauceLabel": "Salsa",
+      "cheeseLabel": "Formatge",
+      "toppingsLabel": "Ingredients",
+      "totalPriceLabel": "Preu Total"
+    },
+    "navigation": {
+      "backButton": "Enrere",
+      "nextButton": "Següent"
+    }
   },
   "footer": {
     "rights": "Tots els Drets Reservats",
     "privacy": "Política de Privacitat",
     "terms": "Termes de Servei"
+  },
+  "laBellaItalia": {
+    "promotions": [
+      {
+        "id": "menu-familiar",
+        "name": "Menú Familiar",
+        "description": "2 pizzes grans + 1 beguda 2L",
+        "price": "€29.00",
+        "dayOfWeek": "Cada dia",
+        "image": "/family-pizza.png"
+      },
+      {
+        "id": "pizza-3x2",
+        "name": "Oferta Pizza 3x2",
+        "description": "Compra 2 pizzes i emporta-te'n 1 de franc",
+        "price": null,
+        "dayOfWeek": "De dilluns a dijous",
+        "image": "/pizza-promotion-3x2.png"
+      },
+      {
+        "id": "discount-15",
+        "name": "15% de Descompte",
+        "description": "En totes les pizzes",
+        "price": null,
+        "dayOfWeek": "Dimarts i Dimecres",
+        "image": "/pizza-promotion-discount.png"
+      }
+    ],
+    "schedule": "Dilluns: Tancat (excepte Juny, Juliol, Agost)\nDimarts - Diumenge: 18:00 - Tancament\nJuny, Juliol, Agost: Obert cada dia",
+    "contact": ["+34 685 177 889", "+34 971 37 48 48"],
+    "additionalInfo": {
+      "productQuality": "Productes d'alta qualitat",
+      "cuisineType": "Cuina italiana",
+      "bananasCollaboration": "En col·laboració amb Bananas",
+      "cardPaymentAtHome": "Pagament amb targeta a domicili disponible"
+    },
+    "extraIngredientInfo": {
+      "title": "Ingredient Extra",
+      "details": "(Peix/Carn/Formatge): +1,00€"
+    },
+    "openingHoursTitle": "Horari d'Obertura",
+    "additionalInfoTitle": "Informació Addicional",
+    "noPromotionJulyAugust": "No hi ha promocions al Juliol i Agost"
   }
 }

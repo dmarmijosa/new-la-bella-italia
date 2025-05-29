@@ -65,7 +65,30 @@
     "cheese": "Formaggio",
     "toppings": "Condimenti",
     "finish": "Finito",
-    "create": "Crea pizza"
+    "create": "Crea pizza",
+    "visualizer": {
+      "defaultName": "La Mia Pizza Personalizzata",
+      "placeholder": "Seleziona ingredienti per creare la tua pizza",
+      "none": "Nessuno",
+      "toppingsCountSuffix": "condimenti"
+    },
+    "controls": {
+      "resetButton": "Ripristina",
+      "selectedToppingsLabel": "Condimenti selezionati",
+      "perToppingPriceSuffix": "per condimento"
+    },
+    "summary": {
+      "title": "La Tua Pizza Personalizzata",
+      "baseLabel": "Base",
+      "sauceLabel": "Salsa",
+      "cheeseLabel": "Formaggio",
+      "toppingsLabel": "Condimenti",
+      "totalPriceLabel": "Prezzo Totale"
+    },
+    "navigation": {
+      "backButton": "Indietro",
+      "nextButton": "Avanti"
+    }
   },
   "footer": {
     "rights": "Tutti i diritti riservati",

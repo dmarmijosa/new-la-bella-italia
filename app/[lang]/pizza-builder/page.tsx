@@ -1,11 +1,10 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { useParams } from "next/navigation"
-import { ChevronLeft, ChevronRight, Download, RefreshCw } from "lucide-react"
+import { ChevronLeft, ChevronRight, Download, RefreshCw, Phone } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
 // This is a client component, so we need to fetch the dictionary differently
@@ -28,31 +27,91 @@ const dictionaries = {
 // Pizza builder ingredients
 const ingredients = {
   bases: [
-    { id: "thin", name: "Thin Crust", image: "/placeholder.svg?height=100&width=100&query=thin pizza base" },
-    { id: "regular", name: "Regular", image: "/placeholder.svg?height=100&width=100&query=regular pizza base" },
-    { id: "thick", name: "Thick Crust", image: "/placeholder.svg?height=100&width=100&query=thick pizza base" },
+    { id: "thin", name: "Thin Crust", color: "#D2691E" },
+    { id: "regular", name: "Regular", color: "#DEB887" },
+    { id: "thick", name: "Thick Crust", color: "#CD853F" },
   ],
   sauces: [
-    { id: "tomato", name: "Tomato Sauce", image: "/placeholder.svg?height=100&width=100&query=tomato sauce" },
-    { id: "white", name: "White Sauce", image: "/placeholder.svg?height=100&width=100&query=white sauce" },
-    { id: "bbq", name: "BBQ Sauce", image: "/placeholder.svg?height=100&width=100&query=bbq sauce" },
+    { id: "tomato", name: "Tomato Sauce", color: "#FF6347" },
+    { id: "white", name: "White Sauce", color: "#FFFDD0" },
+    { id: "bbq", name: "BBQ Sauce", color: "#8B4513" },
   ],
   cheeses: [
-    { id: "mozzarella", name: "Mozzarella", image: "/placeholder.svg?height=100&width=100&query=mozzarella cheese" },
-    { id: "cheddar", name: "Cheddar", image: "/placeholder.svg?height=100&width=100&query=cheddar cheese" },
-    { id: "goat", name: "Goat Cheese", image: "/placeholder.svg?height=100&width=100&query=goat cheese" },
-    { id: "blue", name: "Blue Cheese", image: "/placeholder.svg?height=100&width=100&query=blue cheese" },
+    { id: "mozzarella", name: "Mozzarella", color: "#FFFACD" },
+    { id: "cheddar", name: "Cheddar", color: "#FFA500" },
+    { id: "goat", name: "Goat Cheese", color: "#FAFAD2" },
+    { id: "blue", name: "Blue Cheese", color: "#E0E0E0" },
   ],
   toppings: [
-    { id: "pepperoni", name: "Pepperoni", image: "/placeholder.svg?height=100&width=100&query=pepperoni" },
-    { id: "mushrooms", name: "Mushrooms", image: "/placeholder.svg?height=100&width=100&query=mushrooms" },
-    { id: "onions", name: "Onions", image: "/placeholder.svg?height=100&width=100&query=onions" },
-    { id: "peppers", name: "Peppers", image: "/placeholder.svg?height=100&width=100&query=peppers" },
-    { id: "olives", name: "Olives", image: "/placeholder.svg?height=100&width=100&query=olives" },
-    { id: "ham", name: "Ham", image: "/placeholder.svg?height=100&width=100&query=ham" },
-    { id: "pineapple", name: "Pineapple", image: "/placeholder.svg?height=100&width=100&query=pineapple" },
-    { id: "bacon", name: "Bacon", image: "/placeholder.svg?height=100&width=100&query=bacon" },
+    { id: "pepperoni", name: "Pepperoni", color: "#8B0000" },
+    { id: "mushrooms", name: "Mushrooms", color: "#8B7355" },
+    { id: "onions", name: "Onions", color: "#DDA0DD" },
+    { id: "peppers", name: "Peppers", color: "#228B22" },
+    { id: "olives", name: "Olives", color: "#2F4F4F" },
+    { id: "ham", name: "Ham", color: "#FFB6C1" },
+    { id: "pineapple", name: "Pineapple", color: "#FFD700" },
+    { id: "bacon", name: "Bacon", color: "#A0522D" },
   ],
+}
+
+const callToOrderText = {
+  en: "Call to Order",
+  es: "Llamar para Pedir",
+  ca: "Trucar per Demanar",
+  de: "Anrufen zum Bestellen",
+  fr: "Appeler pour Commander",
+  it: "Chiama per Ordinare",
+}
+
+const ConfettiPiece = ({ id }: { id: number }) => {
+  const colors = ["#FFD700", "#FF69B4", "#00CED1", "#32CD32", "#FF4500", "#1E90FF", "#FFC0CB"]
+  const style = {
+    position: "absolute" as const,
+    width: `${Math.random() * 8 + 6}px`,
+    height: `${Math.random() * 10 + 10}px`,
+    backgroundColor: colors[Math.floor(Math.random() * colors.length)],
+    top: `${Math.random() * -60 - 20}%`, // Start further above the screen
+    left: `${Math.random() * 100}%`,
+    opacity: 1,
+    transform: `rotate(${Math.random() * 360}deg)`,
+    animation: `fall-${id} ${Math.random() * 2 + 3}s linear ${Math.random() * 1}s forwards`, // Randomized delay up to 1s
+  }
+
+  const keyframes = `
+  @keyframes fall-${id} {
+    0% {
+      transform: translateY(0vh) rotate(${Math.random() * 180}deg);
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(110vh) rotate(${Math.random() * 360 + 360}deg);
+      opacity: 0;
+    }
+  }
+`
+
+  return (
+    <>
+      <style>{keyframes}</style>
+      <div style={style} />
+    </>
+  )
+}
+
+const ConfettiExplosion = ({ active }: { active: boolean }) => {
+  if (!active) return null
+  const confettiCount = 80
+
+  return (
+    <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-[100]">
+      {Array.from({ length: confettiCount }).map((_, index) => (
+        <ConfettiPiece key={index} id={index} />
+      ))}
+    </div>
+  )
 }
 
 export default function PizzaBuilderPage() {
@@ -65,8 +124,9 @@ export default function PizzaBuilderPage() {
   const [selectedSauce, setSelectedSauce] = useState<string | null>(null)
   const [selectedCheese, setSelectedCheese] = useState<string | null>(null)
   const [selectedToppings, setSelectedToppings] = useState<string[]>([])
-  const [pizzaName, setPizzaName] = useState("My Custom Pizza")
+  const [pizzaName, setPizzaName] = useState(dict.pizzaBuilder.visualizer?.defaultName || "My Custom Pizza")
   const [pizzaPrice, setPizzaPrice] = useState(8)
+  const [showConfetti, setShowConfetti] = useState(false)
 
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
@@ -118,7 +178,7 @@ export default function PizzaBuilderPage() {
     setSelectedSauce(null)
     setSelectedCheese(null)
     setSelectedToppings([])
-    setPizzaName("My Custom Pizza")
+    setPizzaName(dict.pizzaBuilder.visualizer?.defaultName || "My Custom Pizza")
     setPizzaPrice(8)
   }
 
@@ -136,7 +196,15 @@ export default function PizzaBuilderPage() {
     setPizzaPrice(price)
   }, [selectedBase, selectedSauce, selectedCheese, selectedToppings])
 
-  // Draw pizza on canvas
+  useEffect(() => {
+    if (currentStep === steps.length - 1) {
+      setShowConfetti(true)
+      const timer = setTimeout(() => setShowConfetti(false), 5000) // Confetti will be visible for 5 seconds
+      return () => clearTimeout(timer)
+    }
+  }, [currentStep, steps.length])
+
+  // Draw pizza on canvas using simple shapes and colors
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
@@ -147,46 +215,67 @@ export default function PizzaBuilderPage() {
     // Clear canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-    // Draw pizza base
-    const drawPizza = async () => {
-      // Draw base
-      if (selectedBase) {
-        const baseImg = new Image()
-        baseImg.crossOrigin = "anonymous"
-        baseImg.src = `/placeholder.svg?height=400&width=400&query=${selectedBase} pizza base`
-        await new Promise((resolve) => (baseImg.onload = resolve))
-        ctx.drawImage(baseImg, 0, 0, canvas.width, canvas.height)
-      }
+    const centerX = canvas.width / 2
+    const centerY = canvas.height / 2
+    const radius = 180
 
-      // Draw sauce
-      if (selectedSauce) {
-        const sauceImg = new Image()
-        sauceImg.crossOrigin = "anonymous"
-        sauceImg.src = `/placeholder.svg?height=400&width=400&query=${selectedSauce} on pizza`
-        await new Promise((resolve) => (sauceImg.onload = resolve))
-        ctx.drawImage(sauceImg, 0, 0, canvas.width, canvas.height)
-      }
-
-      // Draw cheese
-      if (selectedCheese) {
-        const cheeseImg = new Image()
-        cheeseImg.crossOrigin = "anonymous"
-        cheeseImg.src = `/placeholder.svg?height=400&width=400&query=${selectedCheese} on pizza`
-        await new Promise((resolve) => (cheeseImg.onload = resolve))
-        ctx.drawImage(cheeseImg, 0, 0, canvas.width, canvas.height)
-      }
-
-      // Draw toppings
-      for (const topping of selectedToppings) {
-        const toppingImg = new Image()
-        toppingImg.crossOrigin = "anonymous"
-        toppingImg.src = `/placeholder.svg?height=400&width=400&query=${topping} on pizza`
-        await new Promise((resolve) => (toppingImg.onload = resolve))
-        ctx.drawImage(toppingImg, 0, 0, canvas.width, canvas.height)
+    // Draw base
+    if (selectedBase) {
+      const base = ingredients.bases.find((b) => b.id === selectedBase)
+      if (base) {
+        ctx.beginPath()
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI)
+        ctx.fillStyle = base.color
+        ctx.fill()
+        ctx.strokeStyle = "#8B4513"
+        ctx.lineWidth = 3
+        ctx.stroke()
       }
     }
 
-    drawPizza()
+    // Draw sauce
+    if (selectedSauce) {
+      const sauce = ingredients.sauces.find((s) => s.id === selectedSauce)
+      if (sauce) {
+        ctx.beginPath()
+        ctx.arc(centerX, centerY, radius - 15, 0, 2 * Math.PI)
+        ctx.fillStyle = sauce.color
+        ctx.fill()
+      }
+    }
+
+    // Draw cheese
+    if (selectedCheese) {
+      const cheese = ingredients.cheeses.find((c) => c.id === selectedCheese)
+      if (cheese) {
+        ctx.globalAlpha = 0.7
+        ctx.beginPath()
+        ctx.arc(centerX, centerY, radius - 20, 0, 2 * Math.PI)
+        ctx.fillStyle = cheese.color
+        ctx.fill()
+        ctx.globalAlpha = 1
+      }
+    }
+
+    // Draw toppings
+    selectedToppings.forEach((toppingId, index) => {
+      const topping = ingredients.toppings.find((t) => t.id === toppingId)
+      if (topping) {
+        // Distribute toppings randomly on the pizza
+        const numItems = 8
+        for (let i = 0; i < numItems; i++) {
+          const angle = (Math.PI * 2 * i) / numItems + index * 0.5
+          const distance = 50 + Math.random() * 80
+          const x = centerX + Math.cos(angle) * distance
+          const y = centerY + Math.sin(angle) * distance
+
+          ctx.beginPath()
+          ctx.arc(x, y, 10, 0, 2 * Math.PI)
+          ctx.fillStyle = topping.color
+          ctx.fill()
+        }
+      }
+    })
   }, [selectedBase, selectedSauce, selectedCheese, selectedToppings])
 
   const downloadPizza = () => {
@@ -201,7 +290,8 @@ export default function PizzaBuilderPage() {
   }
 
   return (
-    <div className="container py-8 md:py-12">
+    <div className="container py-8 md:py-12 relative">
+      <ConfettiExplosion active={showConfetti} />
       <h1 className="text-3xl font-bold tracking-tight mb-8">{dict.pizzaBuilder.title}</h1>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -210,7 +300,9 @@ export default function PizzaBuilderPage() {
             <canvas ref={canvasRef} width={400} height={400} className="w-full h-full" />
             {!selectedBase && (
               <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-muted-foreground">Select ingredients to build your pizza</p>
+                <p className="text-muted-foreground">
+                  {dict.pizzaBuilder.visualizer?.placeholder || "Select ingredients to build your pizza"}
+                </p>
               </div>
             )}
           </div>
@@ -219,10 +311,13 @@ export default function PizzaBuilderPage() {
             <div>
               <h2 className="text-xl font-bold">{pizzaName}</h2>
               <p className="text-muted-foreground">
-                {selectedBase && ingredients.bases.find((b) => b.id === selectedBase)?.name}
-                {selectedSauce && `, ${ingredients.sauces.find((s) => s.id === selectedSauce)?.name}`}
-                {selectedCheese && `, ${ingredients.cheeses.find((c) => c.id === selectedCheese)?.name}`}
-                {selectedToppings.length > 0 && `, ${selectedToppings.length} toppings`}
+                {selectedBase
+                  ? ingredients.bases.find((b) => b.id === selectedBase)?.name
+                  : dict.pizzaBuilder.visualizer?.none || "None"}
+                {selectedSauce && `, ${ingredients.sauces.find((s) => s.id === selectedSauce)?.name || ""}`}
+                {selectedCheese && `, ${ingredients.cheeses.find((c) => c.id === selectedCheese)?.name || ""}`}
+                {selectedToppings.length > 0 &&
+                  `, ${selectedToppings.length} ${dict.pizzaBuilder.visualizer?.toppingsCountSuffix || "toppings"}`}
               </p>
             </div>
             <div className="text-right">
@@ -239,7 +334,7 @@ export default function PizzaBuilderPage() {
             <h2 className="text-xl font-bold">{steps[currentStep].title}</h2>
             <Button variant="outline" size="sm" onClick={handleReset}>
               <RefreshCw className="h-4 w-4 mr-2" />
-              Reset
+              {dict.pizzaBuilder.controls?.resetButton || "Reset"}
             </Button>
           </div>
 
@@ -283,9 +378,7 @@ export default function PizzaBuilderPage() {
                     onClick={() => handleSelectBase(base.id)}
                   >
                     <CardContent className="p-4 flex flex-col items-center text-center">
-                      <div className="w-16 h-16 relative mb-2">
-                        <Image src={base.image || "/placeholder.svg"} alt={base.name} fill className="object-contain" />
-                      </div>
+                      <div className="w-16 h-16 rounded-full mb-2" style={{ backgroundColor: base.color }} />
                       <span className="text-sm font-medium">{base.name}</span>
                     </CardContent>
                   </Card>
@@ -304,14 +397,7 @@ export default function PizzaBuilderPage() {
                     onClick={() => handleSelectSauce(sauce.id)}
                   >
                     <CardContent className="p-4 flex flex-col items-center text-center">
-                      <div className="w-16 h-16 relative mb-2">
-                        <Image
-                          src={sauce.image || "/placeholder.svg"}
-                          alt={sauce.name}
-                          fill
-                          className="object-contain"
-                        />
-                      </div>
+                      <div className="w-16 h-16 rounded-full mb-2" style={{ backgroundColor: sauce.color }} />
                       <span className="text-sm font-medium">{sauce.name}</span>
                     </CardContent>
                   </Card>
@@ -330,14 +416,7 @@ export default function PizzaBuilderPage() {
                     onClick={() => handleSelectCheese(cheese.id)}
                   >
                     <CardContent className="p-4 flex flex-col items-center text-center">
-                      <div className="w-16 h-16 relative mb-2">
-                        <Image
-                          src={cheese.image || "/placeholder.svg"}
-                          alt={cheese.name}
-                          fill
-                          className="object-contain"
-                        />
-                      </div>
+                      <div className="w-16 h-16 rounded-full mb-2" style={{ backgroundColor: cheese.color }} />
                       <span className="text-sm font-medium">{cheese.name}</span>
                     </CardContent>
                   </Card>
@@ -348,8 +427,13 @@ export default function PizzaBuilderPage() {
             {currentStep === 3 && (
               <div>
                 <div className="mb-4 flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">Selected toppings: {selectedToppings.length}/5</span>
-                  <Badge variant="outline">+€0.75 per topping</Badge>
+                  <span className="text-sm text-muted-foreground">
+                    {dict.pizzaBuilder.controls?.selectedToppingsLabel || "Selected toppings"}:{" "}
+                    {selectedToppings.length}/5
+                  </span>
+                  <Badge variant="outline">
+                    +€0.75 {dict.pizzaBuilder.controls?.perToppingPriceSuffix || "per topping"}
+                  </Badge>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                   {ingredients.toppings.map((topping) => (
@@ -365,14 +449,7 @@ export default function PizzaBuilderPage() {
                       }}
                     >
                       <CardContent className="p-4 flex flex-col items-center text-center">
-                        <div className="w-16 h-16 relative mb-2">
-                          <Image
-                            src={topping.image || "/placeholder.svg"}
-                            alt={topping.name}
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
+                        <div className="w-16 h-16 rounded-full mb-2" style={{ backgroundColor: topping.color }} />
                         <span className="text-sm font-medium">{topping.name}</span>
                       </CardContent>
                     </Card>
@@ -384,45 +461,56 @@ export default function PizzaBuilderPage() {
             {currentStep === 4 && (
               <div className="space-y-6">
                 <div className="bg-muted p-4 rounded-lg">
-                  <h3 className="font-medium mb-2">Your Custom Pizza</h3>
+                  <h3 className="font-medium mb-2">{dict.pizzaBuilder.summary?.title || "Your Custom Pizza"}</h3>
                   <ul className="space-y-2 text-sm">
                     <li className="flex justify-between">
-                      <span>Base:</span>
-                      <span>{selectedBase ? ingredients.bases.find((b) => b.id === selectedBase)?.name : "None"}</span>
-                    </li>
-                    <li className="flex justify-between">
-                      <span>Sauce:</span>
+                      <span>{dict.pizzaBuilder.summary?.baseLabel || "Base"}:</span>
                       <span>
-                        {selectedSauce ? ingredients.sauces.find((s) => s.id === selectedSauce)?.name : "None"}
+                        {selectedBase
+                          ? ingredients.bases.find((b) => b.id === selectedBase)?.name
+                          : dict.pizzaBuilder.visualizer?.none || "None"}
                       </span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Cheese:</span>
+                      <span>{dict.pizzaBuilder.summary?.sauceLabel || "Sauce"}:</span>
                       <span>
-                        {selectedCheese ? ingredients.cheeses.find((c) => c.id === selectedCheese)?.name : "None"}
+                        {selectedSauce
+                          ? ingredients.sauces.find((s) => s.id === selectedSauce)?.name
+                          : dict.pizzaBuilder.visualizer?.none || "None"}
                       </span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Toppings:</span>
+                      <span>{dict.pizzaBuilder.summary?.cheeseLabel || "Cheese"}:</span>
+                      <span>
+                        {selectedCheese
+                          ? ingredients.cheeses.find((c) => c.id === selectedCheese)?.name
+                          : dict.pizzaBuilder.visualizer?.none || "None"}
+                      </span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>{dict.pizzaBuilder.summary?.toppingsLabel || "Toppings"}:</span>
                       <span>
                         {selectedToppings.length > 0
                           ? selectedToppings
                               .map((t) => ingredients.toppings.find((item) => item.id === t)?.name)
                               .join(", ")
-                          : "None"}
+                          : dict.pizzaBuilder.visualizer?.none || "None"}
                       </span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="flex justify-between items-center p-4 bg-primary/10 rounded-lg">
-                  <span className="font-medium">Total Price:</span>
+                  <span className="font-medium">{dict.pizzaBuilder.summary?.totalPriceLabel || "Total Price"}:</span>
                   <span className="text-2xl font-bold">€{pizzaPrice.toFixed(2)}</span>
                 </div>
 
-                <Button className="w-full" size="lg">
-                  {dict.menu.addToCart}
-                </Button>
+                <div className="flex gap-4 mt-6">
+                  <Button size="lg" className="flex-1" onClick={() => (window.location.href = "tel:+34871020595")}>
+                    <Phone className="h-4 w-4 mr-2" />
+                    {callToOrderText[lang as keyof typeof callToOrderText]}
+                  </Button>
+                </div>
               </div>
             )}
           </div>
@@ -430,21 +518,22 @@ export default function PizzaBuilderPage() {
           <div className="flex justify-between mt-8">
             <Button variant="outline" onClick={handlePrevStep} disabled={currentStep === 0}>
               <ChevronLeft className="h-4 w-4 mr-2" />
-              Back
+              {dict.pizzaBuilder.navigation?.backButton || "Back"}
             </Button>
 
-            <Button
-              onClick={handleNextStep}
-              disabled={
-                (currentStep === 0 && !selectedBase) ||
-                (currentStep === 1 && !selectedSauce) ||
-                (currentStep === 2 && !selectedCheese) ||
-                currentStep === steps.length - 1
-              }
-            >
-              Next
-              <ChevronRight className="h-4 w-4 ml-2" />
-            </Button>
+            {currentStep < steps.length - 1 && (
+              <Button
+                onClick={handleNextStep}
+                disabled={
+                  (currentStep === 0 && !selectedBase) ||
+                  (currentStep === 1 && !selectedSauce) ||
+                  (currentStep === 2 && !selectedCheese)
+                }
+              >
+                {dict.pizzaBuilder.navigation?.nextButton || "Next"}
+                <ChevronRight className="h-4 w-4 ml-2" />
+              </Button>
+            )}
           </div>
         </div>
       </div>

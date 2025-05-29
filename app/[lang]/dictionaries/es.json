@@ -48,7 +48,8 @@
       "name": "Tu Nombre",
       "email": "Tu Email",
       "message": "Tu Mensaje",
-      "submit": "Enviar Mensaje"
+      "submit": "Enviar Mensaje",
+      "phone": "Teléfono"
     },
     "info": {
       "address": "Dirección",
@@ -64,11 +65,77 @@
     "cheese": "Añade Queso",
     "toppings": "Añade Ingredientes",
     "finish": "Finalizar",
-    "create": "Crear Tu Pizza"
+    "create": "Crear Tu Pizza",
+    "visualizer": {
+      "defaultName": "Mi Pizza Personalizada",
+      "placeholder": "Selecciona ingredientes para crear tu pizza",
+      "none": "Ninguno",
+      "toppingsCountSuffix": "ingredientes"
+    },
+    "controls": {
+      "resetButton": "Reiniciar",
+      "selectedToppingsLabel": "Ingredientes seleccionados",
+      "perToppingPriceSuffix": "por ingrediente"
+    },
+    "summary": {
+      "title": "Tu Pizza Personalizada",
+      "baseLabel": "Base",
+      "sauceLabel": "Salsa",
+      "cheeseLabel": "Queso",
+      "toppingsLabel": "Ingredientes",
+      "totalPriceLabel": "Precio Total"
+    },
+    "navigation": {
+      "backButton": "Atrás",
+      "nextButton": "Siguiente"
+    }
   },
   "footer": {
     "rights": "Todos los Derechos Reservados",
     "privacy": "Política de Privacidad",
     "terms": "Términos de Servicio"
+  },
+  "laBellaItalia": {
+    "promotions": [
+      {
+        "id": "menu-familiar",
+        "name": "Menú Familiar",
+        "description": "2 pizzas grandes + 1 bebida 2L",
+        "price": "€29.00",
+        "dayOfWeek": "Todos los días",
+        "image": "/family-pizza.png"
+      },
+      {
+        "id": "pizza-3x2",
+        "name": "Oferta Pizza 3x2",
+        "description": "Compra 2 pizzas y llévate 1 gratis",
+        "price": null,
+        "dayOfWeek": "Lunes a Jueves",
+        "image": "/pizza-promotion-3x2.png"
+      },
+      {
+        "id": "discount-15",
+        "name": "15% de Descuento",
+        "description": "En todas las pizzas",
+        "price": null,
+        "dayOfWeek": "Martes y Miércoles",
+        "image": "/pizza-promotion-discount.png"
+      }
+    ],
+    "schedule": "Lunes: Cerrado (excepto Junio, Julio, Agosto)\nMartes - Domingo: 18:00 - Cierre\nJunio, Julio, Agosto: Abierto todos los días",
+    "contact": ["+34 685 177 889", "+34 971 37 48 48"],
+    "additionalInfo": {
+      "productQuality": "Productos de alta calidad",
+      "cuisineType": "Cocina italiana",
+      "bananasCollaboration": "En colaboración con Bananas",
+      "cardPaymentAtHome": "Pago con tarjeta a domicilio disponible"
+    },
+    "extraIngredientInfo": {
+      "title": "Ingrediente Extra",
+      "details": "(Pescado/Carne/Queso): +1,00€"
+    },
+    "openingHoursTitle": "Horario de Apertura",
+    "additionalInfoTitle": "Información Adicional",
+    "noPromotionJulyAugust": "No hay promociones en Julio y Agosto"
   }
 }

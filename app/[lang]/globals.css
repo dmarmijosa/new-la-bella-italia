@@ -12,7 +12,7 @@
     --popover-foreground: 20 14.3% 4.1%;
     --primary: 142.1 76.2% 36.3%;
     --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 0 84.2% 60.2%;
+    --secondary: 0 84.2% 60.2%; /* Adjusted to a red tone */
     --secondary-foreground: 0 0% 98%;
     --muted: 60 4.8% 95.9%;
     --muted-foreground: 25 5.3% 44.7%;
@@ -35,7 +35,7 @@
     --popover-foreground: 60 9.1% 97.8%;
     --primary: 142.1 70.6% 45.3%;
     --primary-foreground: 144.9 80.4% 10%;
-    --secondary: 0 62.8% 30.6%;
+    --secondary: 0 62.8% 30.6%; /* Adjusted to a red tone for dark mode */
     --secondary-foreground: 0 0% 98%;
     --muted: 12 6.5% 15.1%;
     --muted-foreground: 24 5.4% 63.9%;
@@ -87,5 +87,36 @@
 @media (max-width: 640px) {
   .menu-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Added Animations */
+@layer utilities {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideDownAndFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+
+  .animate-slideDownAndFadeIn {
+    animation: slideDownAndFadeIn 0.5s ease-in-out forwards;
   }
 }

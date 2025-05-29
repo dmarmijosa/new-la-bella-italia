@@ -65,7 +65,30 @@
     "cheese": "Käse",
     "toppings": "Beläge",
     "finish": "Fertig",
-    "create": "Pizza erstellen"
+    "create": "Pizza erstellen",
+    "visualizer": {
+      "defaultName": "Meine Pizza",
+      "placeholder": "Wählen Sie Zutaten aus, um Ihre Pizza zu erstellen",
+      "none": "Keine",
+      "toppingsCountSuffix": "Beläge"
+    },
+    "controls": {
+      "resetButton": "Zurücksetzen",
+      "selectedToppingsLabel": "Ausgewählte Beläge",
+      "perToppingPriceSuffix": "pro Belag"
+    },
+    "summary": {
+      "title": "Ihre Pizza",
+      "baseLabel": "Boden",
+      "sauceLabel": "Sauce",
+      "cheeseLabel": "Käse",
+      "toppingsLabel": "Beläge",
+      "totalPriceLabel": "Gesamtpreis"
+    },
+    "navigation": {
+      "backButton": "Zurück",
+      "nextButton": "Weiter"
+    }
   },
   "footer": {
     "rights": "Alle Rechte vorbehalten",

@@ -48,7 +48,8 @@
       "name": "Your Name",
       "email": "Your Email",
       "message": "Your Message",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "phone": "Phone"
     },
     "info": {
       "address": "Address",
@@ -64,11 +65,77 @@
     "cheese": "Add Cheese",
     "toppings": "Add Toppings",
     "finish": "Finish",
-    "create": "Create Your Pizza"
+    "create": "Create Your Pizza",
+    "visualizer": {
+      "defaultName": "My Custom Pizza",
+      "placeholder": "Select ingredients to build your pizza",
+      "none": "None",
+      "toppingsCountSuffix": "toppings"
+    },
+    "controls": {
+      "resetButton": "Reset",
+      "selectedToppingsLabel": "Selected toppings",
+      "perToppingPriceSuffix": "per topping"
+    },
+    "summary": {
+      "title": "Your Custom Pizza",
+      "baseLabel": "Base",
+      "sauceLabel": "Sauce",
+      "cheeseLabel": "Cheese",
+      "toppingsLabel": "Toppings",
+      "totalPriceLabel": "Total Price"
+    },
+    "navigation": {
+      "backButton": "Back",
+      "nextButton": "Next"
+    }
   },
   "footer": {
     "rights": "All Rights Reserved",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
+  },
+  "laBellaItalia": {
+    "promotions": [
+      {
+        "id": "menu-familiar",
+        "name": "Family Menu",
+        "description": "2 large pizzas + 1 2L drink",
+        "price": "€29.00",
+        "dayOfWeek": "Every day",
+        "image": "/family-pizza.png"
+      },
+      {
+        "id": "pizza-3x2",
+        "name": "3x2 Pizza Offer",
+        "description": "Buy 2 pizzas and get 1 free",
+        "price": null,
+        "dayOfWeek": "Monday to Thursday",
+        "image": "/pizza-promotion-3x2.png"
+      },
+      {
+        "id": "discount-15",
+        "name": "15% Discount",
+        "description": "On all pizzas",
+        "price": null,
+        "dayOfWeek": "Tuesday and Wednesday",
+        "image": "/pizza-promotion-discount.png"
+      }
+    ],
+    "schedule": "Monday: Closed (except June, July, August)\nTuesday - Sunday: 6:00 PM - Closing\nJune, July, August: Open daily",
+    "contact": ["+34 685 177 889", "+34 971 37 48 48"],
+    "additionalInfo": {
+      "productQuality": "High-quality products",
+      "cuisineType": "Italian cuisine",
+      "bananasCollaboration": "In collaboration with Bananas",
+      "cardPaymentAtHome": "Card payment at home available"
+    },
+    "extraIngredientInfo": {
+      "title": "Extra Ingredient",
+      "details": "(Fish/Meat/Cheese): +€1.00"
+    },
+    "openingHoursTitle": "Opening Hours",
+    "additionalInfoTitle": "Additional Information",
+    "noPromotionJulyAugust": "No promotions in July and August"
   }
 }

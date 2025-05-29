@@ -20,6 +20,16 @@ export const metadata: Metadata = {
   title: "La Bella Pizza - Authentic Italian Pizza",
   description: "Enjoy authentic Italian pizza with the freshest ingredients and traditional recipes.",
   manifest: "/manifest.json",
+  icons: {
+    icon: "/pizza-logo.png", // Main favicon
+    shortcut: "/pizza-logo.png", // For older browsers
+    apple: "/pizza-logo.png", // For Apple touch icon
+    // You can add other sizes or types if needed, e.g., for Android Chrome
+    // other: [
+    //   { rel: 'icon', url: '/favicon-16x16.png', sizes: '16x16' },
+    //   { rel: 'icon', url: '/favicon-32x32.png', sizes: '32x32' },
+    // ],
+  },
 }
 
 export async function generateStaticParams() {
